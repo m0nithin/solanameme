@@ -1,0 +1,976 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Sequel';
+    src: url('font/Sequel100Black-75.otf.ttf') format("opentype"), url('font/Sequel100Black-75.woff2') format('woff2'), url('font/Sequel100Black-75.woff') format('woff'), url('font/Sequel100Black-75.eot') format('embedded-opentype');
+}
+
+body {
+    font-family: 'Sequel';
+    overflow-x: hidden;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(99.87deg, #000000 -1.23%, #000000 100%);
+    image-rendering: -webkit-optimize-contrast;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.entry {
+    background: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry small {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.entry button {
+    border-radius: 6px;
+    padding: 12px;
+    outline: none;
+    cursor: pointer;
+    background: #575656;
+    font-weight: 500;
+    color: rgba(230, 230, 230, 1);
+    font-family: 'Sequel';
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-transform: uppercase;
+}
+
+.main {
+    display: none;
+}
+
+.ham-gif-1 {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+}
+
+.ham-gif-2 {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+}
+
+#follow {
+    position: absolute;
+    text-align: center;
+    width: 50px;
+}
+
+.container {
+    display: flex;
+    max-width: 95rem;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.s {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.bg-section {
+    background: linear-gradient(99.87deg, #BEBDC0 -1.23%, #59595A 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(img/hero-bg.jpg);
+}
+
+.nav-main-2 #myLinks {
+    color: rgba(246, 226, 88, 1);
+    position: absolute;
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: rgba(25, 23, 18, 1);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 9999;
+    left: 0;
+    top: 120px;
+}
+
+.nav-main-2 #myLinks a {
+    text-decoration: none;
+    list-style: none;
+    display: block;
+    font-weight: 600;
+    padding: 21px;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+}
+
+nav {
+    padding: 5vh 10vw;
+    align-items: center;
+    background-color: transparent;
+}
+
+.nav-main {
+    display: flex;
+    align-items: center;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    justify-content: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 90px;
+    height: auto;
+}
+
+.nav-logo p {
+    margin-left: 1vw;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+}
+
+button {
+    font-family: 'Sequel';
+    padding: 18px;
+    border: none;
+    outline: none;
+    background: rgb(0, 0, 0);
+    border-radius: 30px;
+    width: 180px;
+    text-align: center;
+    font-weight: 100;
+    color: rgba(230, 230, 230, 1);
+    font-size: 0.9rem;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#buyNow,
+.s4-btns button {
+    background: rgba(230, 230, 230, 1);
+    color: rgba(25, 25, 25, 1);
+}
+
+.nav-logo p span {
+    font-weight: 600;
+}
+
+.nav-logo h1 {
+    margin-left: 10px;
+    font-size: 17px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-right: 20px;
+    border-right: 0.1px solid #b8b8b8;
+}
+
+.nav-control {
+    margin-left: auto;
+    margin-right: 80px;
+    color: white;
+    font-weight: 600;
+}
+
+.nav-control ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-control ul li {
+    font-weight: 500;
+    margin-left: 70px;
+    list-style: none;
+    cursor: pointer;
+    transition: 200ms;
+    font-size: 13px;
+}
+
+.nav-control ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    padding-bottom: 5vh;
+}
+
+.title-main {
+    text-align: center;
+    padding: 10px;
+    max-width: 1300px;
+    width: 100%;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.title-main h1 {
+    font-size: 4.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+}
+
+.title-main h1 span {
+    color: rgba(230, 230, 230, 1);
+}
+
+.title-main p {
+    margin-top: 15px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    background: -webkit-linear-gradient(#FFF4F4, #FFC1C1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-main p span {
+    -webkit-text-fill-color: red;
+}
+
+.title-img {
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.title-img img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
+
+.hero-img {
+    margin-top: 4vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.hero-img img {
+    margin: 15px;
+    max-width: 360px;
+}
+
+.hero-2 {
+    position: absolute;
+    width: 300px;
+}
+
+.hero-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+}
+
+.hero-btns button {
+    margin: 1vw;
+}
+
+.section-2 {
+    background: rgba(25, 25, 25, 1);
+    color: rgba(230, 230, 230, 1);
+    position: relative;
+}
+
+.section-2-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0.5rem;
+    padding-bottom: 12rem;
+    text-align: left;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-2-title {
+    display: flex;
+    color: color;
+    align-items: center;
+    width: 100%;
+}
+
+.section-2-title h1 {
+    letter-spacing: .95px;
+    font-weight: 900;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    margin-left: 1%;
+}
+
+.section-2-title img {
+    margin-right: 1%;
+}
+
+.section-2-main {
+    display: flex;
+    width: 100%;
+}
+
+.section-2-info {
+    width: 100%;
+}
+
+.section-2-info p {
+    font-size: 1.4rem;
+    margin-top: 5vh;
+    font-weight: light;
+    text-transform: uppercase;
+}
+
+#buyNow {
+    margin-top: 5vh;
+    cursor: pointer;
+    position: relative;
+}
+
+.section-3 {
+    padding: 5rem 0;
+    background: linear-gradient(99.87deg, #BEBDC0 -1.23%, #000000 100%);
+    position: relative;
+}
+
+.section-3-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.about-imgs {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.meme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20%;
+}
+
+.meme img {
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 520px;
+    width: 100%;
+}
+
+.section-3-main {
+    margin-top: 6vh;
+    padding: 5px;
+    max-width: 85rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-3-main-title {
+    display: flex;
+    color: color;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.section-3-main-title h2 {
+    letter-spacing: .95px;
+    font-weight: 900;
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin-left: 1%;
+}
+
+.section-3-main-title img {
+    margin-right: 1%;
+}
+
+.tokenomics-wrapper {
+    border: 5px solid rgba(25, 23, 18, 1);
+    border-radius: 0px 70px 0px 70px;
+    margin-top: 5vh;
+    padding: 10px;
+    background: rgba(119, 118, 119, 1);
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: -20%;
+    position: relative;
+    z-index: 99;
+}
+
+.tokenomics {
+    padding: 5rem;
+    width: 100%;
+    background: rgba(25, 25, 25, 1);
+    color: rgba(230, 230, 230, 1);
+    border-radius: 0px 70px 0px 70px;
+}
+
+.tokenomics small {
+    font-size: 1.3rem;
+}
+
+.tokenomics h3 {
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    font-size: 3.1rem;
+}
+
+.tokenomics p {
+    font-weight: bold;
+    margin-top: 5vh;
+    font-size: 2rem;
+}
+
+.shooting {
+    position: absolute;
+    bottom: 0;
+}
+
+.shooting-1 {
+    left: 5%;
+}
+
+.shooting-2 {
+    right: 5%;
+}
+
+.section-4 {
+    background: rgba(25, 25, 25, 1);
+    padding-top: 25vh;
+    color: rgba(230, 230, 230, 1);
+    padding-bottom: 2vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+.section-4-main {
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-4-main img {
+    max-width: 500px;
+    width: 100%;
+}
+
+.section-4-main div,
+.section-4-main img {
+    margin-top: 2vh;
+}
+
+.s4-text {
+    text-align: left;
+}
+
+.section-4-main h2 {
+    font-size: 4.2rem;
+    text-transform: uppercase;
+}
+
+.section-4-main p {
+    font-size: 1.2rem;
+    margin-top: 2vh;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.s4-btns {
+    display: flex;
+    align-items: stretch;
+    margin-top: 2vh;
+}
+
+#buy,
+#twter {
+    margin-left: 10px;
+}
+
+.footer {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-img {
+    margin-top: 4vh;
+    max-width: 80px;
+}
+
+.dots-right {
+    z-index: 99;
+    position: absolute;
+    top: -20%;
+    right: 0;
+}
+
+.dots-left {
+    z-index: 99;
+    position: absolute;
+    top: 30%;
+}
+
+@media only screen and (max-width: 1560px) {
+    .nav-control {
+        margin-right: 0px;
+    }
+
+    nav {
+        padding: 40px 80px;
+    }
+
+    .s4-img {
+        margin-right: 0;
+    }
+
+    .s4-gifs {
+        margin-left: 0;
+    }
+
+    .shooting-1 {
+        left: 0%;
+        width: 160px;
+    }
+
+    .shooting-2 {
+        right: 0%;
+        width: 160px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .title-main h1 {
+        font-size: 4rem;
+    }
+
+    .section-2-info p {
+        font-size: 1.1rem;
+    }
+
+    .section-2-title h1 {
+        font-size: 2.8rem;
+    }
+
+    .section-3-title h1 {
+        font-size: 2.8rem;
+    }
+
+    .section-3-main-title h2 {
+        font-size: 2.8rem;
+    }
+
+    .section-4-title h1 {
+        font-size: 2.8rem;
+    }
+
+    .section-4-title p {
+        font-size: 1.1rem
+    }
+
+    .meme img {
+        max-width: 340px;
+    }
+
+    .section-4-imgs img,
+    .s4-gifs img {
+        max-height: 166px;
+    }
+
+    .section-4-main h2 {
+        font-size: 2.8rem;
+    }
+
+    .section-4-main p {
+        font-size: 1.1rem;
+    }
+
+    .section-4-main img {
+        margin-top: 6vh;
+    }
+
+    .section-4-main {
+        flex-wrap: wrap;
+    }
+
+    .footer {
+        margin-top: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-4 {
+        padding-top: 2vh;
+    }
+
+    .dots-right,
+    .dots-left {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .title-main h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-gifs img {
+        max-width: 320px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-control {
+        display: none;
+    }
+
+    .nav-main-2 a.icon {
+        display: block;
+    }
+
+    .tokenomics {
+        padding: 1rem 4rem;
+    }
+
+    .tokenomics small {
+        font-size: 1rem;
+    }
+
+    .tokenomics h3 {
+        font-size: 2.8rem;
+        margin-top: 0.8vh;
+        margin-bottom: 2.6rem;
+    }
+
+    .tokenomics p {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+    }
+
+    .shooting {
+        display: none;
+    }
+
+    .hero-2 {
+        width: 200px;
+    }
+
+    .hero-img img {
+        max-width: 300px;
+    }
+
+    .ham-gif-1 {
+        position: fixed;
+        top: 25%;
+        left: 5%;
+        width: 75px;
+    }
+
+    .ham-gif-2 {
+        position: fixed;
+        top: 25%;
+        right: 5%;
+        width: 75px;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .title-main h1 {
+        font-size: 38px;
+    }
+
+    .title-main p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .title-main h1 {
+        font-size: 2.4rem;
+    }
+
+    .section-2-info p {
+        font-size: 0.8rem;
+    }
+
+    .section-2-title h1 {
+        font-size: 2rem;
+    }
+
+    .section-3-title h1 {
+        font-size: 2rem;
+    }
+
+    .section-3-main-title h2 {
+        font-size: 2rem;
+    }
+
+    .section-4-title h1 {
+        font-size: 2rem;
+    }
+
+    .section-4-title p {
+        font-size: 0.8rem;
+    }
+
+    .meme img {
+        max-width: 280px;
+    }
+
+    .section-4-imgs img,
+    .s4-gifs img {
+        max-height: 166px;
+    }
+
+    .section-4-main h2 {
+        font-size: 2.2rem;
+    }
+
+    .section-4-main p {
+        font-size: 0.8rem;
+    }
+
+    .arrow {
+        max-width: 140px;
+    }
+
+    .tokenomics {
+        padding: 0.8rem 3rem;
+    }
+
+    .tokenomics small {
+        font-size: 0.8rem;
+    }
+
+    .tokenomics h3 {
+        font-size: 2.4rem;
+        margin-top: 0.8vh;
+        margin-bottom: 2.2rem;
+    }
+
+    .tokenomics p {
+        font-size: 1.4rem;
+        margin-top: 3.6vh;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 0.8rem;
+        width: 140px;
+    }
+
+    .logo {
+        max-width: 80px;
+        width: 100%;
+    }
+
+    .section-2-container {
+        padding-bottom: 6rem;
+    }
+
+    .nav-logo p {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .title-main h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-2-title h1 {
+        font-size: 2rem;
+    }
+
+    .section-3-title h1 {
+        font-size: 2rem;
+    }
+
+    .section-3-main-title h2 {
+        font-size: 2rem;
+    }
+
+    .section-4-title h1 {
+        font-size: 2rem;
+    }
+
+    .meme {
+        flex-wrap: wrap;
+    }
+
+    .meme img {
+        max-width: 240px;
+    }
+
+    .section-4-imgs img,
+    .s4-gifs img {
+        max-height: 166px;
+    }
+
+    .section-4-main h2 {
+        font-size: 2rem;
+    }
+
+    .arrow {
+        max-width: 120px;
+    }
+
+    .tokenomics {
+        padding: 0.8rem 3rem;
+    }
+
+    .tokenomics h3 {
+        font-size: 2rem;
+        margin-top: 0.8vh;
+        margin-bottom: 2rem;
+    }
+
+    .tokenomics p {
+        font-size: 1.2rem;
+        margin-top: 3.4vh;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 0.8rem;
+        width: 120px;
+    }
+
+    .logo {
+        max-width: 70px;
+        width: 100%;
+    }
+
+    .section-2-container {
+        padding-bottom: 5rem;
+    }
+
+    .meme {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .about-imgs {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+
+    .meme {
+        top: 0;
+    }
+
+    .meme img {
+        margin: 10px;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+
+    nav {
+        padding: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .title-main h1 {
+        font-size: 2rem;
+    }
+
+    .hero-gifs img {
+        max-width: 280px;
+    }
+
+    .section-2-container {
+        padding-bottom: 3vh;
+    }
+
+    .section-3-main {
+        margin-top: 40px;
+    }
+
+    .tokenomics {
+        margin-top: 2vh;
+    }
+
+    .section-3 {
+        padding: 3rem 0;
+    }
+
+    .footer {
+        margin-top: 4vh;
+    }
+
+    .tokenomics-wrapper {
+        margin-bottom: -50%;
+    }
+
+    .meme {
+        margin-top: -30%;
+    }
+
+    .section-4-main {
+        margin-top: 14vh;
+    }
+}
